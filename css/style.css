@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
+
 * {
-    font-family: monospace;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
   }
 
   #iphoneMockup {
@@ -21,4 +23,16 @@
 /* Login Page: */
 .login-container{
   max-width: 250px;
+}
+
+/* About us */
+#founder{
+  display: inline-block;
+  font-weight: bold;
+  font-style: italic;
+  color: #f76f72;
+  padding: 0 15px;
+  border: 3px solid black;
+  border-radius: 50px;
+  border-spacing: 500px;
 }
