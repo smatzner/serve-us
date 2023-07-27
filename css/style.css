@@ -4,6 +4,7 @@
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
+/* iPhone Mockup */
 #iphoneMockup {
   width: 350px;
 }
@@ -26,7 +27,6 @@
 }
 
 /* Contact Page */
-
 .map-responsive {
   position: relative;
   overflow: hidden;
