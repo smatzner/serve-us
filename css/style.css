@@ -1,32 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap");
 
 * {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-  }
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
 
-  #iphoneMockup {
-    width: 350px;
-  }
+#iphoneMockup {
+  width: 350px;
+}
 
-  .iphone-container {
-    position: relative;
-  }
+.iphone-container {
+  position: relative;
+}
 
-  .iphone-content {
-    position: absolute;
-    top: 70px;
-    left: 21.2px;
-    width: 307px;
-    height: 513px;
-  }
+.iphone-content {
+  position: absolute;
+  top: 70px;
+  left: 21.2px;
+  width: 307px;
+  height: 513px;
+}
 
-/* Login Page: */
-.login-container{
+/* Login Page */
+.login-container {
   max-width: 250px;
 }
 
-/* About us */
-#founder{
+/* Contact Page */
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* About us Page */
+#founder {
   display: inline-block;
   font-weight: bold;
   font-style: italic;
