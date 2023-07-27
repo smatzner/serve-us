@@ -2,16 +2,20 @@
     font-family: monospace;
   }
 
+  #iphoneMockup {
+    width: 350px;
+  }
+
   .iphone-container {
     position: relative;
   }
 
   .iphone-content {
     position: absolute;
-    top: 100px;
-    left: 27.5px;
-    width: 392px;
-    height: 640px;
+    top: 70px;
+    left: 21.2px;
+    width: 307px;
+    height: 513px;
   }
 
 /* Login Page: */

@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ServeUs</title>
-    <link rel="shortcut icon" href="./img/serveus_logo_small.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./img/serveus_logo_small.png"
+      type="image/x-icon"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -43,8 +47,9 @@
       <div class="container-fluid d-flex justify-content-between m-3">
         <div>
           <!-- TODO: Logo disablen bei kleiner Screensize -->
-          <!-- TODO: Link zu home über Logo setzen -->
-          <img src="./img/serveus_logo.png" alt="Serveus Logo" width="200" />
+          <a href="./index.html"
+            ><img src="./img/serveus_logo.png" alt="Serveus Logo" width="200"
+          /></a>
         </div>
         <button
           class="btn"
@@ -72,7 +77,7 @@
             <img
               src="./img/iphone_mockup.png"
               alt="iPhone Mockup"
-              id="iphone-mockup"
+              id="iphoneMockup"
             />
             <div class="iphone-content overflow-auto">
               <div class="text-center">
@@ -83,48 +88,42 @@
                 />
               </div>
               <div class="container">
-                <div id="mockupPage1" class="">
+                <div id="mockupPage1">
                   <div class="row mt-4">
-                    <div class="col">
-                      <label for="basic-url" class="form-label"
-                        >Gewicht deiner Pfanne eingeben</label
-                      >
-                      <div class="input-group mb-3">
-                        <input
-                          id="panInput"
-                          type="number"
-                          class="form-control"
-                          placeholder=""
-                          aria-label="Gewicht der Pfanne"
-                          aria-describedby="pan-addon"
-                        />
-                        <span class="input-group-text" id="pan-addon"
-                          >Gramm</span
-                        >
-                      </div>
+                    <label for="basic-url" class="form-label"
+                      >Gewicht deiner Pfanne eingeben</label
+                    >
+                    <div class="input-group mb-3">
+                      <input
+                        id="panInput"
+                        type="number"
+                        class="form-control"
+                        placeholder=""
+                        aria-label="Gewicht der Pfanne"
+                        aria-describedby="pan-addon"
+                      />
+                      <span class="input-group-text" id="pan-addon">Gramm</span>
                     </div>
                   </div>
                   <div class="row mt-3">
-                    <div class="col">
-                      <label for="basic-url" class="form-label"
-                        >Oder eine Pfanne auswählen</label
+                    <label for="basic-url" class="form-label"
+                      >Oder eine Pfanne auswählen</label
+                    >
+                    <div class="mb-3">
+                      <select
+                        id="panSelect"
+                        class="form-select"
+                        aria-label=".form-select-lg example"
                       >
-                      <div class="mb-3">
-                        <select
-                          id="panSelect"
-                          class="form-select"
-                          aria-label=".form-select-lg example"
-                        >
-                          <option selected>Auswählen</option>
-                          <option value="1000">
-                            Palatschinkenpfanne (1000g)
-                          </option>
-                          <option value="1500">IKEA Wok Groß (1500g)</option>
-                          <option value="2500">
-                            WMF Gusseisen Pfanne (2500g)
-                          </option>
-                        </select>
-                      </div>
+                        <option selected>Auswählen</option>
+                        <option value="1000">
+                          Palatschinkenpfanne (1000g)
+                        </option>
+                        <option value="1500">IKEA Wok Groß (1500g)</option>
+                        <option value="2500">
+                          WMF Gusseisen Pfanne (2500g)
+                        </option>
+                      </select>
                     </div>
                   </div>
                   <div class="row mt-3 text-center">
@@ -137,34 +136,31 @@
                 </div>
                 <div id="mockupPage2" class="d-none">
                   <div class="row mt-4">
-                    <div class="col">
-                      <label for="ingredientName" class="form-label"
-                        >Name und Gewicht deiner Zutaten eingeben:</label
+                    <label for="ingredientName" class="form-label"
+                      >Name & Gewicht deiner Zutaten eingeben:</label
+                    >
+                    <div class="input-group mb-3">
+                      <input
+                        id="ingredientName"
+                        type="text"
+                        class="form-control"
+                        placeholder="Zutat"
+                        aria-label="Name der Zutat"
+                      />
+                      <input
+                        id="ingredientWeight"
+                        type="number"
+                        class="form-control"
+                        placeholder="Gewicht"
+                        aria-label="Gewicht der Pfanne"
+                      />
+                      <button
+                        id="addIngredient"
+                        class="btn btn-outline-secondary"
+                        type="button"
                       >
-                      <!-- TODO: input löschen nach hinzufügen -->
-                      <div class="input-group mb-3">
-                        <input
-                          id="ingredientName"
-                          type="text"
-                          class="form-control w-25"
-                          placeholder="Zutat"
-                          aria-label="Name der Zutat"
-                        />
-                        <input
-                          id="ingredientWeight"
-                          type="number"
-                          class="form-control"
-                          placeholder="Gewicht"
-                          aria-label="Gewicht der Pfanne"
-                        />
-                        <button
-                          id="addIngredient"
-                          class="btn btn-outline-secondary"
-                          type="button"
-                        >
-                          Hinzufügen
-                        </button>
-                      </div>
+                        Hinzufügen
+                      </button>
                     </div>
                   </div>
 
@@ -183,34 +179,29 @@
 
                 <div id="mockupPage3" class="d-none">
                   <div class="row mt-4">
-                    <div class="col">
-                      <label for="mealWeight" class="form-label"
-                        >Gesamtgewicht der Mahlzeit (+ Pfanne) eingeben:</label
-                      >
-                      <input
-                        id="mealWeight"
-                        type="number"
-                        class="form-control"
-                        placeholder="Gesamtgewicht der Mahlzeit"
-                        aria-label="Gesamtgewicht der Mahlzeit"
-                      />
-                    </div>
+                    <label for="mealWeight" class="form-label"
+                      >Gesamtgewicht der Mahlzeit eingeben:</label
+                    >
+                    <input
+                      id="mealWeight"
+                      type="number"
+                      class="form-control"
+                      placeholder="Gesamtgewicht der Mahlzeit"
+                      aria-label="Gesamtgewicht der Mahlzeit"
+                    />
                   </div>
                   <div class="row mt-4">
-                    <div class="col">
-                      <label for="servingWeight" class="form-label"
-                        >Gewicht der Portion eingeben:</label
-                      >
-                      <input
-                        id="servingWeight"
-                        type="number"
-                        class="form-control"
-                        placeholder="Gewicht der Portion"
-                        aria-label="Gewicht der Portion"
-                      />
-                    </div>
+                    <label for="servingWeight" class="form-label"
+                      >Gewicht der Portion eingeben:</label
+                    >
+                    <input
+                      id="servingWeight"
+                      type="number"
+                      class="form-control"
+                      placeholder="Gewicht der Portion"
+                      aria-label="Gewicht der Portion"
+                    />
                   </div>
-
                   <div class="row mt-3 text-center">
                     <div class="col">
                       <button id="calculateButton" class="btn btn-secondary">
@@ -220,7 +211,12 @@
                   </div>
                 </div>
 
-                <!-- next Mock-up: -->
+                <div id="mockupPage4" class="d-none">
+                  <div><h4>Zutaten deiner Portion:</h4></div>
+                  <table class="table table-hover">
+                    <tbody id="ingredientsServingTable"></tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>

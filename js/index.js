@@ -37,7 +37,6 @@ nextButton1.addEventListener("click", (e) => {
   }
   mockupPage1.classList.add("d-none");
   mockupPage2.classList.remove("d-none");
-  console.log(panWeight);
 
 });
 
@@ -47,18 +46,19 @@ let ingredientTable = document.getElementById("ingredientTable");
 let ingredients = {};
 
 addIngredient.addEventListener("click", (e) => {
-  let ingredientName = document.getElementById("ingredientName").value;
-  let ingredientWeight = document.getElementById("ingredientWeight").value;
-  if(ingredientName && ingredientWeight){
+  let ingredientName = document.getElementById("ingredientName");
+  let ingredientWeight = document.getElementById("ingredientWeight");
+  if(ingredientName.value && ingredientWeight.value){
     ingredientTable.innerHTML +=
       "<tr><td>" +
-      ingredientName +
+      ingredientName.value +
       "</td><td>" +
-      ingredientWeight +
+      ingredientWeight.value +
       'g</td><td><i class="fa-solid fa-pen-to-square fa-lg"></i></td><td><i class="fa-solid fa-trash fa-lg"></i></td></tr>';
-      ingredients[ingredientName] = ingredientWeight;
+      ingredients[ingredientName.value] = ingredientWeight.value;
+      ingredientName.value = '';
+      ingredientWeight.value = '';
   }
-  console.log(panWeight);
 });
 
 
@@ -73,22 +73,26 @@ nextButton2.addEventListener('click', (e) => {
 
 /* Calculate */
 let calculateButton = document.getElementById('calculateButton');
-
-// panWeight = 1000;
-// ingredients['Reis'] = 100;
-// ingredients['Champignons'] = 250;
-
-// console.log(panWeight);
-// console.log(ingredients);
+let ingredientsServingTable = document.getElementById('ingredientsServingTable');
+let mockupPage4 = document.getElementById('mockupPage4');
 
 calculateButton.addEventListener('click', (e) => {
   let mealWeight = document.getElementById('mealWeight').value;
   let servingWeight = document.getElementById('servingWeight').value;
   
-  let quotient = (mealWeight - panWeight) / servingWeight;
-  Object.keys(ingredients).forEach((ingredient) => {
-    ingredients[ingredient] /= quotient;
-    Math.floor(ingredient[ingredient]);
-  });
-  console.log(ingredients);
+  if(mealWeight && panWeight){
+    let quotient = (mealWeight - panWeight) / servingWeight;
+    Object.keys(ingredients).forEach((ingredient) => {
+      ingredients[ingredient] /= quotient;
+      ingredients[ingredient] = Math.floor(ingredients[ingredient]);
+
+      ingredientsServingTable.innerHTML += '<tr><td>' + ingredient + '</td><td>' + ingredients[ingredient] + 'g</td></tr>';
+      mockupPage3.classList.add('d-none');
+      mockupPage4.classList.remove('d-none');
+    });
+  }
+
+
 })
+
+
